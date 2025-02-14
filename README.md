@@ -98,3 +98,53 @@ Se quiser remover os estilos padrão e começar do zero, pode usar um **CSS Rese
 ---
 
 Se quiser explorar mais, tente inspecionar diferentes elementos no DevTools e veja como os navegadores os estilizam! 🚀
+# Diferença entre `inline` e `inline-block`
+
+A diferença entre **inline** e **inline-block** está no comportamento do elemento em relação ao fluxo do documento e como ele trata largura e altura.
+
+---
+
+## 📌 **Inline (`display: inline`)**  
+Os elementos `inline`:
+- ✅ Ocupam **apenas o espaço necessário** no conteúdo.
+- ✅ **Não permitem** definir `width` e `height`.
+- ✅ Mantêm os elementos na **mesma linha**, sem quebras.
+
+### **Exemplo:**  
+```html
+<span style="background: yellow;">Texto inline</span> 
+<span style="background: lightblue;">Outro inline</span>
+```
+🔹 Os dois `<span>` ficam na mesma linha e a largura se ajusta ao conteúdo.
+
+---
+
+## 📌 **Inline-block (`display: inline-block`)**  
+Os elementos `inline-block`:
+- ✅ Também ficam **na mesma linha** que outros elementos.
+- ✅ **Permitem definir** `width`, `height`, `margin` e `padding`.
+- ✅ São mais fáceis de estilizar do que `inline`.
+
+### **Exemplo:**  
+```html
+<span style="display: inline-block; width: 150px; height: 50px; background: yellow;">Bloco inline</span>
+<span style="display: inline-block; width: 100px; height: 50px; background: lightblue;">Outro bloco</span>
+```
+🔹 Aqui os elementos têm **tamanhos definidos**, mas continuam na mesma linha.
+
+---
+
+## 🌟 **Resumo**
+| **Propriedade** | **Inline** | **Inline-block** |
+|---------------|------------|----------------|
+| Ocupa apenas o tamanho do conteúdo | ✅ | ✅ |
+| Pode definir `width` e `height` | ❌ | ✅ |
+| Pode ter `margin` e `padding` externo | ❌ (apenas lateralmente) | ✅ |
+| Permite elementos na mesma linha | ✅ | ✅ |
+
+💡 **Dica**: Use `inline-block` quando precisar alinhar elementos horizontalmente **mas ainda quiser controlar tamanhos e espaçamentos**.
+
+---
+
+Se quiser explorar mais, tente inspecionar diferentes elementos no DevTools e veja como os navegadores os estilizam! 🚀
+
